@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>CrashReporterDialog</class>
+ <widget class="QDialog" name="CrashReporterDialog">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>550</width>
+    <height>450</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>500</width>
+    <height>0</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>Otter Browser Crash Reporter</string>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout">
+   <item>
+    <widget class="QLabel" name="mainHeaderLabel">
+     <property name="font">
+      <font>
+       <weight>75</weight>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="text">
+      <string>We are Sorry</string>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QLabel" name="crashDescriptionLabel">
+     <property name="text">
+      <string>Otter Browser had a problem and crashed.
+We will try to restore your windows and tabs when it restarts.</string>
+     </property>
+     <property name="wordWrap">
+      <bool>true</bool>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QLabel" name="reportEncouragementLabel">
+     <property name="text">
+      <string>To help us diagnose and fix the problem, you can send us a crash report.</string>
+     </property>
+     <property name="wordWrap">
+      <bool>true</bool>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QLabel" name="reportHeaderLabel">
+     <property name="font">
+      <font>
+       <weight>75</weight>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="text">
+      <string>Error Description</string>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QLabel" name="reportDescriptionLabel">
+     <property name="text">
+      <string>Optional, English is preferred if possible.</string>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <layout class="QFormLayout" name="formLayout">
+     <item row="0" column="0">
+      <widget class="QLabel" name="commentLabel">
+       <property name="text">
+        <string>Comment:</string>
+       </property>
+       <property name="buddy">
+        <cstring>commentTextEdit</cstring>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="1">
+      <widget class="QPlainTextEdit" name="commentTextEdit">
+       <property name="placeholderText">
+        <string>e.g. clicking on a link, dragging image, etc.</string>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="0">
+      <widget class="QLabel" name="urlLabel">
+       <property name="text">
+        <string>Last page visited:</string>
+       </property>
+       <property name="buddy">
+        <cstring>urlLineEdit</cstring>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="1">
+      <widget class="QLineEdit" name="urlLineEdit">
+       <property name="placeholderText">
+        <string>last visited web address</string>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="0">
+      <widget class="QLabel" name="emailLabel">
+       <property name="text">
+        <string>Contact email:</string>
+       </property>
+       <property name="buddy">
+        <cstring>emailLineEdit</cstring>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="1">
+      <widget class="QLineEdit" name="emailLineEdit">
+       <property name="placeholderText">
+        <string>if we may contact you for help</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+   <item>
+    <spacer name="verticalSpacer">
+     <property name="orientation">
+      <enum>Qt::Vertical</enum>
+     </property>
+     <property name="sizeHint" stdset="0">
+      <size>
+       <width>0</width>
+       <height>0</height>
+      </size>
+     </property>
+    </spacer>
+   </item>
+   <item>
+    <widget class="QLabel" name="closeHeaderLabel">
+     <property name="font">
+      <font>
+       <weight>75</weight>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="text">
+      <string>After Closing this Dialog</string>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QRadioButton" name="fullRestartButton">
+     <property name="text">
+      <string>Full restart</string>
+     </property>
+     <property name="checked">
+      <bool>true</bool>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QRadioButton" name="minimalRestartButton">
+     <property name="text">
+      <string>Minimal restart (no tabs)</string>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QRadioButton" name="noRestartButton">
+     <property name="text">
+      <string>Do not restart</string>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QDialogButtonBox" name="buttonBox">
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+     <property name="standardButtons">
+      <set>QDialogButtonBox::NoButton</set>
+     </property>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <tabstops>
+  <tabstop>commentTextEdit</tabstop>
+  <tabstop>urlLineEdit</tabstop>
+  <tabstop>emailLineEdit</tabstop>
+  <tabstop>fullRestartButton</tabstop>
+  <tabstop>minimalRestartButton</tabstop>
+  <tabstop>noRestartButton</tabstop>
+ </tabstops>
+ <resources/>
+ <connections/>
+</ui>

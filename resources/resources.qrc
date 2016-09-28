@@ -1,0 +1,5 @@
+<RCC>
+    <qresource prefix="/">
+        <file>icons/otter-browser.png</file>
+    </qresource>
+</RCC>
