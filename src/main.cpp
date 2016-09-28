@@ -111,7 +111,7 @@ int main(int argc, char *argv[])
 		multiPart.append(reportPart);
 		multiPart.append(dumpPart);
 
-		QNetworkRequest request(QUrl(QLatin1String("https://otter-browser.org/crash-reports/submit")));
+		QNetworkRequest request(QUrl(QLatin1String("https://otter-browser.org/crash-reports/submit/")));
 		request.setHeader(QNetworkRequest::UserAgentHeader, QLatin1String("Otter Browser Crash Reporter/1.0"));
 
 		QNetworkAccessManager manager;
